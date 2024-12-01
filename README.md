@@ -2,6 +2,11 @@
 
 Welcome to the repository for my personal portfolio website! This project showcases my journey, skills, and projects as a developer, and is built to reflect my personal style and technical abilities. The website is currently a work in progress, aiming to go live by early 2025.
 
+## See It in Production
+```
+https://deshmukh-ayush.github.io/portfolio-2025/
+```
+
 ## 🚧 Project Status
 
 **Status**: Work in Progress  
@@ -21,11 +26,3 @@ Welcome to the repository for my personal portfolio website! This project showca
 - **Responsive Design**: Optimized for desktop, tablet, and mobile viewing.
 - **Smooth Animations**: Using GSAP for seamless transitions and effects.
 - **Contact Form**: A form to easily reach out for inquiries and collaborations.
-
-## 🚀 Installation and Usage
-
-To explore the code or run it locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Deshmukh-Ayush/portfolio-2025.git
