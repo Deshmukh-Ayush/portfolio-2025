@@ -1,54 +1,1182 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <a href="#" target="_blank">
-        <header class="top-header">
-        </header>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
       
-        <!--dust particel-->
-        <div>
-          <div class="starsec"></div>
-          <div class="starthird"></div>
-          <div class="starfourth"></div>
-          <div class="starfifth"></div>
-        </div>
-        <!--Dust particle end--->
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
       
-        <div class="lamp__wrap">
-          <div class="lamp">
-            <div class="cable"></div>
-            <div class="cover"></div>
-            <div class="in-cover">
-              <div class="bulb"></div>
-            </div>
-            <div class="light"></div>
-          </div>
-        </div>
-        <!-- END Lamp -->
-        <section class="error">
-          <!-- Content -->
-          <div class="error__content">
-            <div class="error__message message">
-              <h1 class="message__title">Work In Progress</h1>
-              <p class="message__text">Currently the work is under progress. Portfolio will be live soon in early 2025</p>
-            </div>
-            <div class="error__nav e-nav">
-              <a href="https://codepen.io/uiswarup/pen/qBebRpq" target="_blanck" class="e-nav__link"></a>
-            </div>
-          </div>
-          <!-- END Content -->
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
       
-        </section>
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
       
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
       </a>
 
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
 
-    <script src="./script.js"></script>
-</body>
-</html>
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="2aa887c8-0aae-4a63-9f3f-ee05518fa994" data-section-id="2aa887c8-0aae-4a63-9f3f-ee05518fa994">
+
+<htmlCode>
+<div id="root">
+  <nav class="fixed w-full py-4 px-6 bg-neutral-900/90 backdrop-blur-sm z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-white text-2xl font-bold">AD.</a>
+      <div class="lg:hidden">
+        <button id="menu-btn" class="text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="menu" class="hidden lg:flex space-x-8">
+        <a href="#hero" class="text-white hover:text-violet-400 transition-colors">Home</a>
+        <a href="#about" class="text-white hover:text-violet-400 transition-colors">About</a>
+        <a href="#skills" class="text-white hover:text-violet-400 transition-colors">Skills</a>
+        <a href="#projects" class="text-white hover:text-violet-400 transition-colors">Projects</a>
+        <a href="#experience" class="text-white hover:text-violet-400 transition-colors">Experience</a>
+        <a href="#contact" class="text-white hover:text-violet-400 transition-colors">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden bg-neutral-900 fixed top-[4rem] left-0 w-full p-4">
+      <div class="flex flex-col space-y-4">
+        <a href="#hero" class="text-white hover:text-violet-400 transition-colors">Home</a>
+        <a href="#about" class="text-white hover:text-violet-400 transition-colors">About</a>
+        <a href="#skills" class="text-white hover:text-violet-400 transition-colors">Skills</a>
+        <a href="#projects" class="text-white hover:text-violet-400 transition-colors">Projects</a>
+        <a href="#experience" class="text-white hover:text-violet-400 transition-colors">Experience</a>
+        <a href="#contact" class="text-white hover:text-violet-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="min-h-[70vh] bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 flex items-center">
+    <div class="container mx-auto px-6 py-24">
+      <div class="flex flex-col items-center text-center lg:text-left lg:items-start">
+        <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6 animate__animated animate__fadeInDown">
+          Hi, I'm <span class="text-violet-400">Ayush Deshmukh</span>
+        </h1>
+        <h2 class="text-2xl lg:text-4xl text-gray-300 mb-8 animate__animated animate__fadeInUp animate__delay-1s">
+          Web Developer
+        </h2>
+        <div class="flex gap-4 animate__animated animate__fadeIn animate__delay-2s">
+          <a href="#contact" class="px-8 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-full transition-colors">
+            Hire Me
+          </a>
+          <a href="#projects" class="px-8 py-3 border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-neutral-900 rounded-full transition-all">
+            View Work
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu when window is resized to larger screen
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</div>
+</htmlCode></element><element id="3cc55644-f2d5-47d9-86f4-f5cfb6b1cb69" data-section-id="3cc55644-f2d5-47d9-86f4-f5cfb6b1cb69">
+
+<htmlCode>
+<div id="root">
+  <section id="about" class="min-h-screen bg-neutral-800 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInDown">About Me</h2>
+        <div class="h-1 w-20 bg-violet-400 mx-auto"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 animate__animated animate__fadeInLeft">
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Hello! I'm Ayush Deshmukh, a passionate Web Developer focused on creating beautiful and functional digital experiences. With a keen eye for detail and a love for clean code, I transform ideas into reality.
+          </p>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            I specialize in building responsive websites and web applications, combining technical expertise with creative problem-solving to deliver exceptional results.
+          </p>
+          <div class="grid grid-cols-2 gap-6 mt-8">
+            <div class="bg-neutral-700 p-6 rounded-lg hover:bg-neutral-600 transition-colors">
+              <h3 class="text-violet-400 text-xl font-bold mb-2">3+</h3>
+              <p class="text-gray-300">Years Experience</p>
+            </div>
+            <div class="bg-neutral-700 p-6 rounded-lg hover:bg-neutral-600 transition-colors">
+              <h3 class="text-violet-400 text-xl font-bold mb-2">50+</h3>
+              <p class="text-gray-300">Projects Completed</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative animate__animated animate__fadeInRight">
+          <div class="bg-neutral-700 p-8 rounded-lg">
+            <h3 class="text-white text-xl font-bold mb-6">Technical Expertise</h3>
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-300">
+                  <span>Frontend Development</span>
+                  <span>90%</span>
+                </div>
+                <div class="h-2 bg-neutral-600 rounded-full">
+                  <div class="h-full w-[90%] bg-violet-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-300">
+                  <span>Backend Development</span>
+                  <span>85%</span>
+                </div>
+                <div class="h-2 bg-neutral-600 rounded-full">
+                  <div class="h-full w-[85%] bg-violet-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-300">
+                  <span>UI/UX Design</span>
+                  <span>80%</span>
+                </div>
+                <div class="h-2 bg-neutral-600 rounded-full">
+                  <div class="h-full w-[80%] bg-violet-400 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-violet-400/20 rounded-full blur-xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="5722cd5e-d07d-4506-9ba1-90d3c25172f3" data-section-id="5722cd5e-d07d-4506-9ba1-90d3c25172f3">
+
+
+                <htmlcode id="el-ogsfzffu">
+<div id="root">
+  <section id="skills" class="py-20 bg-neutral-900">
+    <div class="container mx-auto px-6" id="el-88knvfge">
+      <div class="text-center mb-16" id="el-564d763r">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInDown" id="el-hsu70a2x">Skills &amp; Technologies</h2>
+        <div class="h-1 w-20 bg-violet-400 mx-auto" id="el-2xei4qpn"></div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="el-4461h2e0">
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn" id="el-ymz9cf7q">
+          <div class="text-center" id="el-2qy5fhma">
+            <i class="fab fa-html5 text-4xl text-violet-400 mb-4" id="el-ikpnyb6z"></i>
+            <h3 class="text-white font-semibold" id="el-g876x4ph">HTML5</h3>
+            <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto" id="el-vew4adxy"></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn animate__delay-1s" id="el-qxz89dpt">
+          <div class="text-center" id="el-wlzxddrh">
+            <i class="fab fa-css3-alt text-4xl text-violet-400 mb-4" id="el-nl11g6j4"></i>
+            <h3 class="text-white font-semibold" id="el-92yeir5y">CSS3</h3>
+            <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto" id="el-ed3dy9ow"></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn animate__delay-2s" id="el-9j5svyhb">
+          <div class="text-center" id="el-k1sf6zob">
+            <i class="fab fa-js text-4xl text-violet-400 mb-4" id="el-dxnomgdp"></i>
+            <h3 class="text-white font-semibold" id="el-2mmnis2l">JavaScript</h3>
+            <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto" id="el-dy7pijo0"></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn animate__delay-3s" id="el-p2kwa3gz">
+          <div class="text-center" id="el-v9a0gnxd">
+            <i class="fab fa-react text-4xl text-violet-400 mb-4" id="el-3aoj6cst"></i>
+            <h3 class="text-white font-semibold" id="el-kgtmi5l2">React</h3>
+            <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto" id="el-gznp2ri4"></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn" id="el-msy8nzt0">
+          <div class="text-center" id="el-k9jmge24">
+            <i class="fab fa-node-js text-4xl text-violet-400 mb-4" id="el-itkm65g1"></i>
+            <h3 class="text-white font-semibold" id="el-i42uvnnk">Node.js</h3>
+            <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto" id="el-xensjmog"></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn animate__delay-1s" id="el-q2app9oh">
+  <div class="text-center">
+    <i class="fab fa-js text-4xl text-violet-400 mb-4"></i>
+    <h3 class="text-white font-semibold">TypeScript</h3>
+    <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto"></div>
+  </div>
+</div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn animate__delay-2s" id="el-ui653b2e">
+          <div class="text-center" id="el-zp1asev2">
+            <i class="fab fa-git-alt text-4xl text-violet-400 mb-4" id="el-9rts5fve"></i>
+            <h3 class="text-white font-semibold" id="el-ruzf6t2f">Git</h3>
+            <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto" id="el-8aox5fod"></div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg hover:bg-neutral-700 transition-all transform hover:-translate-y-1 animate__animated animate__fadeIn animate__delay-3s" id="el-dmvguizz">
+          <div class="text-center" id="el-dwxrh9mt">
+            <i class="fas fa-database text-4xl text-violet-400 mb-4" id="el-niupzye8"></i>
+            <h3 class="text-white font-semibold" id="el-prvle7s9">MongoDB</h3>
+            <div class="mt-3 h-1 w-12 bg-violet-400 mx-auto" id="el-9yonkfpg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center" id="el-liw5rjr2">
+        <p class="text-gray-400 max-w-2xl mx-auto" id="el-u6ea82ox">
+          These are just a few of the technologies I work with. I'm always learning and expanding my skillset to stay current with the latest web development trends.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlcode>
+              </element><element id="f8e364af-3b8c-499d-9b06-f1b4ce65c5e1" data-section-id="f8e364af-3b8c-499d-9b06-f1b4ce65c5e1">
+
+<htmlCode>
+<div id="root">
+  <section id="projects" class="py-20 bg-neutral-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInDown">Featured Projects</h2>
+        <div class="h-1 w-20 bg-violet-400 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="group bg-neutral-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeIn">
+          <div class="bg-neutral-700 h-48 relative overflow-hidden">
+            <div class="absolute inset-0 bg-violet-400/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex gap-4">
+                <a href="#" class="bg-violet-500 text-white px-4 py-2 rounded-full hover:bg-violet-600 transition-colors">Demo</a>
+                <a href="#" class="bg-neutral-800 text-white px-4 py-2 rounded-full hover:bg-neutral-700 transition-colors">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">E-Commerce Platform</h3>
+            <p class="text-gray-400 mb-4">A full-stack e-commerce solution with React and Node.js</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">React</span>
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">Node.js</span>
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group bg-neutral-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeIn animate__delay-1s">
+          <div class="bg-neutral-700 h-48 relative overflow-hidden">
+            <div class="absolute inset-0 bg-violet-400/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex gap-4">
+                <a href="#" class="bg-violet-500 text-white px-4 py-2 rounded-full hover:bg-violet-600 transition-colors">Demo</a>
+                <a href="#" class="bg-neutral-800 text-white px-4 py-2 rounded-full hover:bg-neutral-700 transition-colors">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Task Management App</h3>
+            <p class="text-gray-400 mb-4">Real-time task management with drag-and-drop features</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">Vue.js</span>
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">Firebase</span>
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="group bg-neutral-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">
+          <div class="bg-neutral-700 h-48 relative overflow-hidden">
+            <div class="absolute inset-0 bg-violet-400/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex gap-4">
+                <a href="#" class="bg-violet-500 text-white px-4 py-2 rounded-full hover:bg-violet-600 transition-colors">Demo</a>
+                <a href="#" class="bg-neutral-800 text-white px-4 py-2 rounded-full hover:bg-neutral-700 transition-colors">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Portfolio Generator</h3>
+            <p class="text-gray-400 mb-4">Dynamic portfolio creation tool for developers</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">Next.js</span>
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">GraphQL</span>
+              <span class="text-sm bg-neutral-700 text-violet-400 px-3 py-1 rounded-full">AWS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://github.com/yourusername" class="inline-block bg-violet-500 text-white px-8 py-3 rounded-full hover:bg-violet-600 transition-colors animate__animated animate__fadeIn animate__delay-3s">
+          View More Projects
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="24a13b4d-5ea6-453b-b634-51283cbfb27b" data-section-id="24a13b4d-5ea6-453b-b634-51283cbfb27b">
+
+
+                <htmlcode id="el-lyc26tp6">
+<div id="root">
+  <section id="experience" class="py-20 bg-neutral-900">
+    <div class="container mx-auto px-6" id="el-m1qa3puy">
+  <div class="text-center mb-16">
+    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInDown">Work Experience</h2>
+    <div class="h-1 w-20 bg-violet-400 mx-auto"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto">
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-violet-400/20"></div>
+
+      <!-- Experience 1 -->
+      <div class="relative mb-16 animate__animated animate__fadeInLeft">
+        <div class="md:ml-auto md:pl-8 md:w-1/2 md:text-left text-right relative">
+          <div class="hidden md:block absolute left-0 top-5 transform -translate-x-[19px] w-9 h-9 rounded-full border-4 border-violet-400 bg-neutral-900"></div>
+          <div class="bg-neutral-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition-transform">
+            <span class="inline-block px-4 py-1 bg-violet-400/20 text-violet-400 rounded-full text-sm mb-3">2023 - Present</span>
+            <h3 class="text-xl font-bold text-white mb-2">Web Developer</h3>
+            <h4 class="text-violet-400 mb-3">Code4All Club</h4>
+            <ul class="text-gray-300 space-y-2 list-disc list-inside">
+              <li>Active member of university's coding club</li>
+              <li>Developing web applications for club projects</li>
+              <li>Collaborating with team members on technical solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="relative mb-16 animate__animated animate__fadeInRight">
+        <div class="md:mr-auto md:pr-8 md:w-1/2 relative">
+          <div class="hidden md:block absolute right-0 top-5 transform translate-x-[19px] w-9 h-9 rounded-full border-4 border-violet-400 bg-neutral-900"></div>
+          <div class="bg-neutral-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition-transform">
+            <span class="inline-block px-4 py-1 bg-violet-400/20 text-violet-400 rounded-full text-sm mb-3">2023</span>
+            <h3 class="text-xl font-bold text-white mb-2">Freelance Developer</h3>
+            <h4 class="text-violet-400 mb-3">BingeAsk</h4>
+            <ul class="text-gray-300 space-y-2 list-disc list-inside">
+              <li>Developed a full-featured chat application</li>
+              <li>Implemented real-time messaging functionality</li>
+              <li>Managed project requirements and client communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 3 -->
+      <div class="relative animate__animated animate__fadeInLeft">
+        <div class="md:ml-auto md:pl-8 md:w-1/2 md:text-left text-right relative">
+          <div class="hidden md:block absolute left-0 top-5 transform -translate-x-[19px] w-9 h-9 rounded-full border-4 border-violet-400 bg-neutral-900"></div>
+          <div class="bg-neutral-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition-transform">
+            <span class="inline-block px-4 py-1 bg-violet-400/20 text-violet-400 rounded-full text-sm mb-3">2022 - Present</span>
+            <h3 class="text-xl font-bold text-white mb-2">B.Tech Student</h3>
+            <h4 class="text-violet-400 mb-3">UIT RGPV</h4>
+            <ul class="text-gray-300 space-y-2 list-disc list-inside">
+              <li>Sophomore year student</li>
+              <li>Focusing on computer science and web development</li>
+              <li>Participating in technical projects and competitions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-16">
+    <a href="#contact" class="inline-block bg-violet-500 text-white px-8 py-3 rounded-full hover:bg-violet-600 transition-colors animate__animated animate__fadeIn">
+      Let's Work Together
+    </a>
+  </div>
+</div>
+  </section>
+</div>
+</htmlcode>
+              </element><element id="31e446f2-b2b5-4b2f-93ba-87bd2070427f" data-section-id="31e446f2-b2b5-4b2f-93ba-87bd2070427f">
+
+<htmlCode>
+<div id="root">
+  <section id="services" class="py-20 bg-neutral-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInDown">Services</h2>
+        <div class="h-1 w-20 bg-violet-400 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="group bg-neutral-900 p-8 rounded-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeIn">
+          <div class="w-16 h-16 bg-violet-400/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-violet-400/30 transition-colors">
+            <i class="fas fa-code text-3xl text-violet-400"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Web Development</h3>
+          <p class="text-gray-400 mb-4">Custom website development with clean, efficient code and modern technologies.</p>
+          <ul class="text-gray-300 space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              Responsive Design
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              Performance Optimization
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              SEO Integration
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="group bg-neutral-900 p-8 rounded-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeIn animate__delay-1s">
+          <div class="w-16 h-16 bg-violet-400/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-violet-400/30 transition-colors">
+            <i class="fas fa-mobile-alt text-3xl text-violet-400"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">App Development</h3>
+          <p class="text-gray-400 mb-4">Full-stack application development with scalable and maintainable solutions.</p>
+          <ul class="text-gray-300 space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              Progressive Web Apps
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              API Integration
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              Database Design
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="group bg-neutral-900 p-8 rounded-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">
+          <div class="w-16 h-16 bg-violet-400/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-violet-400/30 transition-colors">
+            <i class="fas fa-paint-brush text-3xl text-violet-400"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">UI/UX Design</h3>
+          <p class="text-gray-400 mb-4">Creating intuitive and engaging user interfaces with modern design principles.</p>
+          <ul class="text-gray-300 space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              Wireframing
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              Prototyping
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-violet-400 mr-2"></i>
+              User Testing
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <a href="#contact" class="inline-block px-8 py-3 bg-violet-500 text-white rounded-full hover:bg-violet-600 transition-colors animate__animated animate__fadeIn animate__delay-3s">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="c790c088-3bbc-4541-887c-bb28b3b331f7" data-section-id="c790c088-3bbc-4541-887c-bb28b3b331f7">
+
+
+                <htmlcode id="el-0bbr6mrl">
+<div id="root">
+  <section id="testimonials" class="py-20 bg-neutral-900">
+    <div class="container mx-auto px-6" id="el-6mlf90a5">
+      <div class="text-center mb-16" id="el-enkfewzx">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInDown" id="el-kpx33hkp">Client Testimonials</h2>
+        <div class="h-1 w-20 bg-violet-400 mx-auto" id="el-s3ump5cd"></div>
+      </div>
+
+      <div class="testimonials-slider relative max-w-5xl mx-auto" id="el-j0shqt0a">
+        <div class="swiper-container" id="el-twduhwxw">
+          <div class="swiper-wrapper" id="el-hnb1a5jm">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide" id="el-0v3ddyln">
+              <div class="bg-neutral-800 p-8 rounded-lg relative" id="el-fsopo99b">
+                <div class="absolute -top-4 right-8 text-6xl text-violet-400/20" id="el-d4frt5nr">"</div>
+                <div class="relative z-10" id="el-tw7rbvea">
+                  <p class="text-gray-300 mb-6 italic" id="el-ki1t8xbw">
+                    "Working with Ayush was an excellent experience. His attention to detail and technical expertise helped us create a website that exceeded our expectations."
+                  </p>
+                  <div class="flex items-center" id="el-hs3pi3uy">
+                    <div class="w-12 h-12 bg-violet-400 rounded-full flex items-center justify-center" id="el-3f6bfxvy">
+                      <span class="text-neutral-900 font-bold text-lg" id="el-n3fe9ty3">JD</span>
+                    </div>
+                    <div class="ml-4" id="el-9ookvgb8">
+                      <h4 class="text-white font-semibold" id="el-vyvfgsp6">John Doe</h4>
+                      <p class="text-violet-400" id="el-5h15picq">CEO, Tech Startup</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide" id="el-vaufk9pq">
+              <div class="bg-neutral-800 p-8 rounded-lg relative" id="el-wufklxlv">
+                <div class="absolute -top-4 right-8 text-6xl text-violet-400/20" id="el-7b0gnnrc">"</div>
+                <div class="relative z-10" id="el-mqt3rsy8">
+                  <p class="text-gray-300 mb-6 italic" id="el-tjjc93pc">
+                    "The web application Ayush developed for us has significantly improved our business processes. His problem-solving skills are outstanding."
+                  </p>
+                  <div class="flex items-center" id="el-kiqqtgh6">
+                    <div class="w-12 h-12 bg-violet-400 rounded-full flex items-center justify-center" id="el-sw2qtj64">
+                      <span class="text-neutral-900 font-bold text-lg" id="el-r61prh4w">SM</span>
+                    </div>
+                    <div class="ml-4" id="el-y0yw6532">
+                      <h4 class="text-white font-semibold" id="el-qnldz5c0">Sarah Mitchell</h4>
+                      <p class="text-violet-400" id="el-3oe26ppg">Product Manager, Digital Corp</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide" id="el-mvfgmtyo">
+              <div class="bg-neutral-800 p-8 rounded-lg relative" id="el-q21v6f7k">
+                <div class="absolute -top-4 right-8 text-6xl text-violet-400/20" id="el-m5cv0w4e">"</div>
+                <div class="relative z-10" id="el-r7px9hy3">
+                  <p class="text-gray-300 mb-6 italic" id="el-m51hlxfx">
+                    "Incredible work ethic and technical knowledge. Ayush delivered our project on time and provided excellent support throughout the process."
+                  </p>
+                  <div class="flex items-center" id="el-hi9735p6">
+                    <div class="w-12 h-12 bg-violet-400 rounded-full flex items-center justify-center" id="el-ictz1a0y">
+                      <span class="text-neutral-900 font-bold text-lg" id="el-xc9c9ogk">RK</span>
+                    </div>
+                    <div class="ml-4" id="el-vqd3jbno">
+                      <h4 class="text-white font-semibold" id="el-7cf4r6c1">Robert King</h4>
+                      <p class="text-violet-400" id="el-mvtbaadt">CTO, Innovation Labs</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-8" id="el-c6av10g5"></div>
+        </div>
+        <div class="swiper-button-prev text-violet-400" id="el-s9kyod1x"></div>
+        <div class="swiper-button-next text-violet-400" id="el-0kkfl32x"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const testimonialSwiper = new Swiper('.testimonials-slider .swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 2,
+        },
+      }
+    });
+  </script>
+</div>
+</htmlcode>
+              </element><element id="a3d67459-e72d-484e-a486-67b3ebdc1ffe" data-section-id="a3d67459-e72d-484e-a486-67b3ebdc1ffe">
+
+
+                <htmlcode id="el-bem4q8zr">
+<div id="root">
+  <section id="contact" class="py-20 bg-neutral-800">
+    <div class="container mx-auto px-6" id="el-z9kgp995">
+  <div class="text-center mb-16">
+    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInDown">Get In Touch</h2>
+    <div class="h-1 w-20 bg-violet-400 mx-auto"></div>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+    <!-- Contact Info -->
+    <div class="space-y-8 animate__animated animate__fadeInLeft">
+      <div class="bg-neutral-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-violet-400/20 rounded-lg flex items-center justify-center">
+            <i class="fas fa-envelope text-violet-400"></i>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-white font-semibold">Email</h3>
+            <p class="text-gray-400">ayushdeshmukh301@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-neutral-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-violet-400/20 rounded-lg flex items-center justify-center">
+            <i class="fas fa-phone text-violet-400"></i>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-white font-semibold">Phone</h3>
+            <p class="text-gray-400">+91 92446 58445</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-neutral-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-violet-400/20 rounded-lg flex items-center justify-center">
+            <i class="fas fa-map-marker-alt text-violet-400"></i>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-white font-semibold">Location</h3>
+            <p class="text-gray-400">Bhopal, India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex space-x-4 mt-8">
+        <a href="#" class="w-12 h-12 bg-neutral-900 rounded-lg flex items-center justify-center hover:bg-violet-400 transition-colors group">
+          <i class="fab fa-github text-violet-400 group-hover:text-white"></i>
+        </a>
+        <a href="#" class="w-12 h-12 bg-neutral-900 rounded-lg flex items-center justify-center hover:bg-violet-400 transition-colors group">
+          <i class="fab fa-linkedin text-violet-400 group-hover:text-white"></i>
+        </a>
+        <a href="#" class="w-12 h-12 bg-neutral-900 rounded-lg flex items-center justify-center hover:bg-violet-400 transition-colors group">
+          <i class="fab fa-twitter text-violet-400 group-hover:text-white"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="space-y-6 animate__animated animate__fadeInRight" id="contactForm" action="mailto:ayushdeshmukh301@gmail.com" method="POST" enctype="text/plain">
+      <div>
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-neutral-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-400" required="">
+      </div>
+      <div>
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-neutral-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-400" required="">
+      </div>
+      <div>
+        <input type="text" placeholder="Subject" class="w-full px-4 py-3 bg-neutral-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-400" required="">
+      </div>
+      <div>
+        <textarea placeholder="Your Message" rows="6" class="w-full px-4 py-3 bg-neutral-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-400 resize-none" required=""></textarea>
+      </div>
+      <button type="submit" class="w-full py-3 bg-violet-500 text-white rounded-lg hover:bg-violet-600 transition-colors">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add your form submission logic here
+      
+      // Example animation for submit button
+      const button = e.target.querySelector('button');
+      button.innerHTML = '<i class="fas fa-check"></i> Sent!';
+      button.classList.add('bg-green-500');
+      
+      setTimeout(() => {
+        button.innerHTML = 'Send Message';
+        button.classList.remove('bg-green-500');
+        e.target.reset();
+      }, 3000);
+    });
+  </script>
+</div>
+</htmlcode>
+              </element><element id="110bfc3d-29df-4fe6-9c47-01f59bfeca60" data-section-id="110bfc3d-29df-4fe6-9c47-01f59bfeca60">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 pt-20 pb-10">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <!-- About -->
+        <div class="animate__animated animate__fadeIn">
+          <a href="#" class="text-2xl font-bold text-white mb-4 block">AD.</a>
+          <p class="text-gray-400 mb-6">Crafting digital experiences with clean code and modern design.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.github.com/Deshmukh-Ayush" class="text-gray-400 hover:text-violet-400 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ayush-deshmukh-144a86277" class="text-gray-400 hover:text-violet-400 transition-colors">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/everywhereayush" class="text-gray-400 hover:text-violet-400 transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="animate__animated animate__fadeIn animate__delay-1s">
+          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#hero" class="text-gray-400 hover:text-violet-400 transition-colors">Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-violet-400 transition-colors">About</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-violet-400 transition-colors">Services</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-violet-400 transition-colors">Projects</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-violet-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="animate__animated animate__fadeIn animate__delay-2s">
+          <h3 class="text-white font-semibold mb-4">Services</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-violet-400 transition-colors">Web Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-violet-400 transition-colors">App Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-violet-400 transition-colors">UI/UX Design</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-violet-400 transition-colors">Consulting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="animate__animated animate__fadeIn animate__delay-3s">
+          <h3 class="text-white font-semibold mb-4">Contact Info</h3>
+          <ul class="space-y-4">
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-envelope mr-3 text-violet-400"></i>
+              ayushdeshmukh301@gmail.com
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-phone mr-3 text-violet-400"></i>
+              +91 92446 58445
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-map-marker-alt mr-3 text-violet-400"></i>
+              Bhopal, India
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-neutral-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2024 Ayush Deshmukh. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-violet-400 text-sm transition-colors">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-violet-400 text-sm transition-colors">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 bg-violet-500 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-violet-600 transition-colors opacity-0 invisible">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script>
+    // Scroll to top functionality
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+        scrollToTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        scrollToTopBtn.classList.add('opacity-0', 'invisible');
+        scrollToTopBtn.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
